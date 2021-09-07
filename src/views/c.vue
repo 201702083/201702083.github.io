@@ -48,10 +48,11 @@
         </v-card-title>
       </v-row>
     </v-img>
- <v-img v-if="visible==1"
-    src="../assets/Insta_logo.png"
-    height="100%"
-    @click="visible=0"
+    <v-img v-if="visible==1"
+        src="../assets/Insta_logo.png"
+        height="25%"
+        width="25%"
+        @click="visible=0"
     ></v-img>
     <v-list two-line>
       <v-list-item>
@@ -80,7 +81,7 @@
         </v-list-item-content>
 
         <v-list-item-icon>
-          <v-icon @click="say('문자�? 보내?��겠습?���??')">mdi-message-text</v-icon>
+          <v-icon @click="say('문자를 보내시겠습니까?')">mdi-message-text</v-icon>
         </v-list-item-icon>
       </v-list-item>
 
