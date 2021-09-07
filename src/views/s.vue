@@ -1,28 +1,29 @@
 <template>
   <div class="s">
     <h1>My pick</h1>
-    <v-row v-for="(img,i) in images" :key="i"
+    <v-row 
   
->  <v-col class="arrow" v-if="i == order"><v-icon @click="previous()">mdi-arrow-left-thick</v-icon></v-col>  
+>  <v-col class="arrow" ><v-icon @click="previous()">mdi-arrow-left-thick</v-icon></v-col>  
   <v-card 
     outlined
     max-height="30"
   >
   
-    <v-img v-if="i == order"
-      :src="img.link"
+    <v-img 
+      :src="images[order].link"
       
-      width="500px"
+      max-width="100%"
       
       >
 
     </v-img>
-    <v-btn v-if="i==order"
+    <v-btn 
      @click="like()" 
     > <v-icon>mdi-cards-heart</v-icon></v-btn>
-    <span v-if="i==order" > {{img.like}}</span>
+    <span > {{images[order].like}}</span>
   </v-card> 
-      <v-col  class="arrow" v-if="i == order"><v-icon @click="next()">mdi-arrow-right-thick</v-icon></v-col>
+  
+      <v-col class="arrow" ><v-icon @click="next()">mdi-arrow-right-thick</v-icon></v-col>
 
     </v-row> 
   </div>
